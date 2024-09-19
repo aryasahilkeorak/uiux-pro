@@ -1,0 +1,68 @@
+.sidebar {
+    top: 0;
+    right: 0;
+    width: 0;
+    z-index: 9999;
+    position: fixed;
+    min-height: 100vh;
+    max-height: auto;
+    background-color: $dark;
+    overflow-x: hidden;
+    transition: 0.7s all;
+
+    .page-links {
+        a {
+            font-family: $font-family-poppins;
+            color: $light;
+            transition: all 0.5s;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $danger;
+            }
+        }
+    }
+
+    .sidenav-social-icons {
+        .social-icons {
+            a {
+                color: $light;
+                transition: 0.5s;
+
+                &:hover {
+                    color: $danger;
+                }
+            }
+        }
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+    }
+
+    .openbtn {
+        cursor: pointer;
+    }
+
+    .sidenav-contact-btn {
+        position: absolute;
+        bottom: 10px;
+        width: 80%;
+        left: 0;
+        right: 0;
+
+        a {
+            display: inline-block;
+        }
+    }
+
+}
+
+
+
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

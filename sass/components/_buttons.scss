@@ -1,0 +1,9 @@
+.btn-hover{
+    border: 1px solid transparent;
+    transition: all .5s;
+    &:hover{
+        border: 1px solid $light;
+        background-color: $danger;
+        color: $light !important;
+    }
+}

@@ -1,0 +1,73 @@
+.slick-slide img {
+    display: inline-block;
+}
+.slick-next,
+.slick-prev {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    color: transparent;
+    background: $gray-300 !important;
+    padding: 40px;
+    left: -12%;
+    z-index: 99999999;
+    @include media-breakpoint-down(xl){
+        left: -8%;
+        padding: 25px;
+    }
+    @include media-breakpoint-down(lg){
+        left: -3%;
+        padding: 40px;
+    }
+
+    @include media-breakpoint-down(sm){
+       display: none !important;
+    }
+
+    &:hover {
+        background: $gray-500 !important;
+    }
+
+    ::before {
+        opacity: 1;
+    }
+}
+
+.slick-next {
+    top: 38%;
+    
+}
+
+.slick-prev {
+    top: 52%;
+    
+}
+
+.slick-next:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45%;
+    margin: auto;
+    height: 12px;
+    width: 20px;
+    background: url(../../assets/images/arrow-up.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slick-prev:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45%;
+    margin: auto;
+    height: 12px;
+    width: 20px;
+    background: url(../../assets/images/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

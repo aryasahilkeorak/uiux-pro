@@ -1,0 +1,35 @@
+.main-footer {
+    background-color: $gray-900;
+   
+    ul {
+        li {
+            a {
+                color: $light;
+
+                &:hover {
+                    color: $danger ;
+                }
+            }
+        }
+    }
+    .footer-recent-news{
+        img{
+            height: 90px;
+        }
+    }
+
+    form {
+        .form-control {
+            border: none;
+            border-radius: 0;
+            &:focus {
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .copyright-sec {
+        background-color: $gray;
+    }
+}

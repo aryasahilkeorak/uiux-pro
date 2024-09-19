@@ -1,0 +1,73 @@
+.about-us-banner {
+    background-image: url('../../assets/images/about-banner-img.png');
+    @include bacground-properties;
+}
+
+.about-start-new-project-sec {
+    background-image: url('../../assets/images/about/about-banner-2.png');
+    @include bacground-properties;
+}
+.flex-wrap-mob{
+    @include media-breakpoint-down(sm){
+        flex-wrap: wrap;
+    }
+}
+
+.about-line {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        content: " ";
+        bottom: 26%;
+        left: 0;
+        background: $danger;
+        padding: 9px 45px;
+        z-index: -1;
+    }
+
+    &:hover {
+        &::after {
+            position: absolute;
+            content: " ";
+            bottom: 12%;
+            left: -10px;
+            background: #FFEDED;
+            padding: 20px 55px;
+            z-index: -1;
+        }
+    }
+}
+
+.skills-info-box {
+    min-height: 200px;
+    top: 0;
+    bottom: 0;
+
+    @include media-breakpoint-down(sm){
+        min-height: 170px;
+    }
+
+    .skill-icon {
+        width: 45%;
+        z-index: 2;
+        left: 0;
+    }
+
+    .skill-text {
+        width: 70%;
+        right: 0;
+        z-index: 1;
+        border: 1px solid transparent;
+        transition: all .7s;
+
+        .inner-text-box {
+            width: 78%;
+        }
+
+        &:hover {
+            border: 1px solid $gray;
+        }
+    }
+}

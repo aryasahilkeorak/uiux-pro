@@ -1,0 +1,41 @@
+.portfolio-banner {
+    background-image: url('../../assets/images/portfolio/portfolio-banner-img.png');
+    @include bacground-properties;
+}
+
+
+.portfolio-nav-buttons {
+    .nav {
+        @include media-breakpoint-down(sm) {
+            display: block !important;
+        }
+        .nav-item {
+            margin-bottom: 15px;
+            .nav-link {
+                background-color: $light;
+                border: 1px solid $gray-400;
+
+                &.active {
+                    background-color: $danger;
+                    border: 1px solid $danger ;
+                    color: $light  !important;
+                }
+
+                &:hover {
+                    background-color: $danger;
+                    border: 1px solid $danger ;
+                    color: $light  !important;
+                }
+                @include media-breakpoint-down(sm) {
+                    text-align: center;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+

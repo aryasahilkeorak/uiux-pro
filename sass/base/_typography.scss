@@ -1,0 +1,88 @@
+// font weights
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-800{
+    font-weight: 800;
+}
+.fw-900{
+    font-weight: 900;
+}
+// font families
+.ff-inter {
+    font-family: $font-family-inter;
+}
+
+.ff-poppins {
+    font-family: $font-family-poppins;
+}
+
+// font-sizes
+.fs-200 {
+    font-size: calc($fs-extra-large - 8px);
+    @include media-breakpoint-down(md){
+        font-size: calc($fs-extra-large - 108px);
+    }
+    @include media-breakpoint-down(md){
+        font-size: calc($fs-extra-large - 128px);
+    }
+}
+
+.fs-90 {
+    font-size: calc($fs-large - 6px);
+
+    @include media-breakpoint-down(sm) {
+        font-size: calc($fs-large - 50px);
+    }
+}
+
+.fs-61 {
+    font-size: calc($fs-medium - 3px);
+    @include media-breakpoint-down(sm) {
+        font-size: calc($fs-medium - 13px);
+    }
+}
+
+.fs-54 {
+    font-size: calc($fs-medium - 10px);
+    @include media-breakpoint-down(xl) {
+        font-size: calc($fs-medium - 20px);
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: calc($fs-medium - 35px);
+    }
+}
+
+.fs-42{
+    font-size: calc($fs-medium - 22px);
+    @include media-breakpoint-down(sm) {
+        font-size: calc($fs-medium - 43px);
+    }
+}
+
+.fs-18 {
+    font-size: calc($fs-small - 14px);
+}
+
+
+// font-color
+.text-gray-100 {
+    color: $gray-100 !important;
+}
+
+.text-gray-600 {
+    color: $gray-600 !important;
+}
+
+.text-gray-700 {
+    color: $gray-700 !important;
+}
+
+.text-gray-800 {
+    color: $gray-800 !important;
+}

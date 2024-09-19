@@ -1,0 +1,29 @@
+// overlay effect for gallary images
+.overlay-box {
+    overflow: hidden;
+
+    &:hover {
+        .overlay-content {
+            bottom: 0;
+            height: 100%;
+        }
+    }
+
+    .overlay-content {
+        height: 0;
+        width: 100%;
+        bottom: 100%;
+        overflow: hidden;
+        transition: .5s all;
+        background-color: $danger;
+
+        .overlay-text {
+
+            &.overlay-text-portfolio {
+                left: 5%;
+                right: 0;
+                bottom: 3%;
+            }
+        }
+    }
+}

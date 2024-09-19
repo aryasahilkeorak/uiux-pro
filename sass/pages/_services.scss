@@ -1,0 +1,63 @@
+.services-banner {
+    background-image: url('../../assets/images/services-banner-img.png');
+   @include bacground-properties;
+}
+
+.know-about-us-sec {
+    background-color: $fa-pink;
+
+    .service-line {
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            content: " ";
+            bottom: -38%;
+            left: -2px;
+            background: $pink;
+            padding: 9px 45px;
+            z-index: -1;
+            transition: .7s linear;
+        }
+
+        &:hover {
+            &::after {
+                position: absolute;
+                content: " ";
+                left: -17px;
+                padding: 18px 62px;
+            }
+        }
+    }
+
+}
+
+.lets-talk-start-project-sec {
+    background-color: $fa-pink;
+
+    .service-contact-line {
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            content: " ";
+            bottom: -28%;
+            left: 3px;
+            background: $pink;
+            padding: 7px 40px;
+            z-index: -1;
+            transition: .7s linear;
+        }
+
+        &:hover {
+            &::after {
+                position: absolute;
+                content: " ";
+                left: -11px;
+                padding: 17px 53px;
+            }
+        }
+    }
+}

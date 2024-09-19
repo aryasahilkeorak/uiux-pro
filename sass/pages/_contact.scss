@@ -1,0 +1,76 @@
+.contact-banner {
+    background-image: url('../../assets/images/contact-banner.png');
+    @include bacground-properties;
+}
+
+.contact-details-and-map {
+    .map {
+        iframe {
+            min-height: 515px;
+
+            @include media-breakpoint-down(sm) {
+                min-height: 300px;
+            }
+        }
+    }
+
+    .contact-box {
+        min-height: 515px;
+        overflow: hidden;
+    }
+
+    .contact-bottom-line {
+        position: relative;
+        z-index: 1;
+    
+        &::after {
+            position: absolute;
+            content: " ";
+            bottom: -4%;
+            left: 0px;
+            background: $gray-600;
+            opacity: 0.2;
+            padding: 3px 15px;
+            z-index: -1;
+            border-radius: 8px;
+        }
+    }
+}
+
+.join-our-team-form {
+    .form-control {
+        padding: 13px 16px;
+        border: 0.989474px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+
+        &:focus {
+            color: #3C4B4D;
+            background-color: #fff;
+            border-color: rgba(0, 0, 0, 0.1);
+            outline: 0;
+            box-shadow: 0 0 0 0 transparent;
+        }
+    }
+
+    .border-radius{
+        border-radius: 12px;
+    }
+
+
+    input[type=file]::file-selector-button {
+        border: 1px solid $gray;
+        padding: .2em .4em;
+        border-radius: .2em;
+        background-color: $light;
+        transition: 1s;
+    }
+
+    input[type=file]::file-selector-button:hover {
+        background-color: $danger;
+        border: 1px solid $danger;
+        color: $light;
+    }
+}
+
+
+

@@ -1,0 +1,479 @@
+// HERO BANNER SECTION START
+.hero-banner {
+    background-image: url('../../assets/images/index-banner.png');
+    @include bacground-properties;
+
+    @include media-breakpoint-down(md) {
+        padding: 30px 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 20px;
+        min-height: auto;
+        background-position: right;
+    }
+
+    .my-custom-slider {
+
+        .custom-indicators {
+            z-index: 2;
+            left: inherit;
+            right: 1%;
+
+            [data-bs-target] {
+                text-indent: 0px;
+                height: auto;
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            button {
+                background: transparent;
+
+                &.active {
+                    color: $success;
+
+                    &.after-none {
+                        &::after {
+                            display: none;
+                            content: none !important;
+                        }
+
+                        &::before {
+                            content: " ";
+                            display: block;
+                            z-index: 9;
+                            top: 0;
+                            right: 5%;
+                            height: 40px;
+                            width: 2px;
+                            background: $secondary;
+                        }
+                    }
+
+                    &::after {
+                        content: " ";
+                        display: block;
+                        z-index: 9;
+                        top: 0;
+                        right: 5%;
+                        height: 40px;
+                        width: 2px;
+                        background: $secondary;
+                    }
+                }
+            }
+        }
+
+        .my-carousel-inner {
+            overflow: hidden;
+
+            @include media-breakpoint-down(md) {
+                padding: 20px 0px;
+            }
+
+            .hero-animated-components {
+
+                .hero-main-circle {
+                    margin-top: 50px;
+                    margin-bottom: 10px;
+
+                    @include media-breakpoint-down(lg) {
+                        margin-top: 12%;
+                    }
+
+                }
+
+                .hero-dots-vector {
+                    top: -17%;
+                    right: 33%;
+                    z-index: 1;
+
+                    @include media-breakpoint-down(xxl) {
+                        top: -19%;
+                        right: 41%;
+                    }
+
+                    @include media-breakpoint-down(xl) {
+                        top: -21%;
+                        right: 36%;
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        top: -16.5%;
+                        right: 44%;
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        display: none;
+                    }
+
+                }
+
+                .hero-yellow-circle {
+                    top: 3%;
+                    right: 4%;
+                    z-index: 2;
+
+                    img {
+                        animation: rotate-reverse infinite 20s linear;
+
+                        @keyframes rotate-reverse {
+
+                            0% {
+                                transform: rotate(360deg);
+                            }
+
+                            100% {
+                                transform: rotate(-360deg);
+                            }
+                        }
+                    }
+
+                    @include media-breakpoint-down(xxl) {
+                        top: 7%;
+                        right: 7%;
+                    }
+
+                    @include media-breakpoint-down(xl) {
+                        top: 0%;
+                        right: 0%;
+                    }
+
+
+                    @include media-breakpoint-down(lg) {
+                        top: 0%;
+                        right: 24%;
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        right: 13%;
+                        top: 0;
+                    }
+
+                }
+
+                .hero-main-circle {
+                    img {
+                        animation: rotate infinite 20s linear;
+
+                        @keyframes rotate {
+
+                            0% {
+                                transform: rotate(-360deg);
+                            }
+
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+
+                    }
+
+                }
+
+                .hero-animated-rocket {
+                    position: absolute;
+                    top: 9px;
+                    right: -8%;
+                    animation: float infinite 10s ease;
+
+                    @keyframes float {
+
+                        0%,
+                        to {
+                            transform: translate(3%, 3%) rotate(0deg);
+                        }
+
+                        50% {
+                            transform: translate(-8%, -8%) rotate(0deg);
+                        }
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        top: 8%;
+                        right: 8%;
+                    }
+
+                    @include media-breakpoint-down(md) {
+                        top: 5%;
+                        right: -2%;
+                    }
+                }
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+            }
+        }
+
+        .hero-banner-smedia-icons {
+            top: 35%;
+            left: 1%;
+            z-index: 1;
+
+            &:hover {
+                color: $danger;
+            }
+
+            @include media-breakpoint-down(lg) {
+                top: 27%;
+            }
+        }
+    }
+}
+
+.links-bg {
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-bottom: 20px;
+    display: inline-block;
+
+    &::after {
+        content: " ";
+        position: absolute;
+        bottom: 20%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background: $pink;
+        padding: 10px;
+        z-index: -1;
+        transition: .8s all;
+
+        @include media-breakpoint-down(sm) {
+            bottom: 45%;
+        }
+    }
+
+    &:hover {
+        &::after {
+            padding: 20px;
+        }
+    }
+}
+
+.links-bg-2 {
+    z-index: 1;
+
+    &::after {
+        position: absolute;
+        content: " ";
+        bottom: 25%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background: $pink;
+        width: 100%;
+        padding: 10px;
+        z-index: -1;
+        transition: .7s linear;
+    }
+
+    &:hover {
+        &::after {
+            padding: 20px;
+
+        }
+    }
+}
+
+// OUR 10 YEARS EXPERINCE
+.our-experince-vertical-slider {
+
+
+
+    .flex-wrap-sm {
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .controls {
+        left: 7%;
+        top: 38%;
+    }
+}
+
+// OUR FEATURES WORKS SECTION START
+.our-features-work-sec {
+
+    .features-side-text {
+        transform: rotate(-90deg);
+        top: 47%;
+        left: -10%;
+    }
+}
+
+
+// IT'S PROUD FOR US SECTION START
+.proud-for-us-section {
+    background: rgb(246, 246, 250);
+    background: linear-gradient(90deg, rgba(246, 246, 250, 0.9724264705882353) 0%, rgba(255, 0, 0, 1) 77%, rgba(231, 237, 238, 1) 100%);
+
+
+}
+
+// OUR SERVICES CARDS SECTION START
+.our-services-cards {
+    background-color: $gray-200;
+
+    .services-side-text {
+        transform: rotate(90deg);
+        top: 47%;
+        right: -13%;
+
+        @include media-breakpoint-down(xxl) {
+            display: none;
+        }
+
+    }
+
+    .services-card {
+        position: relative;
+
+
+        .card-text {
+            width: 85%;
+            background: $light;
+            margin-top: -40px;
+            padding-top: 5%;
+            margin-right: auto;
+            margin-left: auto;
+
+            @include media-breakpoint-down(xl) {
+                min-height: 350px;
+            }
+
+            @include media-breakpoint-down(lg) {
+                min-height: 300px;
+            }
+
+            @include media-breakpoint-down(md) {
+                min-height: 200px;
+            }
+        }
+
+        .card-number {
+            position: absolute;
+            z-index: 1;
+            top: -15%;
+            right: 5.5%;
+            height: auto;
+            display: block;
+            min-height: 65px;
+
+            @include media-breakpoint-down(xl) {
+                top: -11%;
+                min-height: 55px;
+            }
+
+            @include media-breakpoint-down(md) {
+                top: -16%;
+                min-height: 65px;
+            }
+
+        }
+    }
+
+}
+
+// INDEX TESTIMONIALS SECTION START
+.index-testimonial-sec {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        bottom: 35%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 0%;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        background: none;
+        border: 0;
+        opacity: 0.5;
+        -webkit-transition: opacity 0.15s ease;
+        transition: opacity 0.15s ease;
+    }
+
+}
+
+// START A NEW PROJECT WITH UXPRO SECTION START
+.start-new-project-sec {
+    background-image: url('../../assets/images/bg-gray.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // @include for-phone-only {
+    //     padding: 60px 20px;
+    // }
+}
+
+// OUR BEST EXPERINCE SECTION START
+.our-best-experince-sec {
+    .filter {
+
+        filter: grayscale(100%);
+        transform: scale(1);
+        transition: 1.2s linear;
+
+        &:hover {
+            filter: grayscale(0%);
+            transform: scale(1.2);
+            transition: 1.2s linear;
+        }
+    }
+
+
+}
+
+// OUR INTRACTIVE NEWS SECTION START
+.our-interactive-news-sec {
+
+    .links-bg-3 {
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            content: " ";
+            bottom: 10%;
+            left: 0;
+            background: $pink;
+            padding: 10px 45px;
+            z-index: -1;
+            transition: .7s linear;
+        }
+
+        &:hover {
+            &::after {
+                bottom: 20%;
+                padding: 20px 45px;
+            }
+        }
+    }
+
+    .zoom-in {
+        overflow: hidden;
+
+        img {
+            transform: scale(1);
+            transition: all 0.5s;
+
+            &:hover {
+                transform: scale(1.07);
+            }
+        }
+    }
+
+}
+
+
+
+
+
